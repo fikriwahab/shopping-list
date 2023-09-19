@@ -1,10 +1,10 @@
-from django.http import HttpResponse
-from django.core import serializers
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from main.forms import ProductForm
 from django.urls import reverse
-from .models import Product
+from main.models import Product
+from django.http import HttpResponse
+from django.core import serializers
 
 
 
