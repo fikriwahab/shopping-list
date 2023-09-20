@@ -1,6 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
+</a>
+
+<h1>Shopping List Page</h1>
+
+<h5>Name:</h5>
+<p>{{name}}</p>
+
+<h5>Class:</h5>
+<p>{{class}}</p>
+
 <table>
     <tr>
         <th>Name</th>
@@ -20,20 +30,17 @@
         </tr>
     {% endfor %}
 </table>
-
+<h5>Sesi terakhir login: {{ last_login }}</h5>
 <br />
 
 <a href="{% url 'main:create_product' %}">
     <button>
         Add New Product
     </button>
+
+<a href="{% url 'main:logout' %}">
+    <button>
+        Logout
+    </button>
 </a>
-
-    <h1>Shopping List Page</h1>
-
-    <h5>Name:</h5>
-    <p>{{name}}</p>
-
-    <h5>Class:</h5>
-    <p>{{class}}</p>
 {% endblock content %}
